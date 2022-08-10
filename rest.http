@@ -1,0 +1,74 @@
+GET HTTP://localhost:2000/members
+
+### create a member
+
+POST HTTP://localhost:2000/members/register
+Content-Type: application/json
+
+{
+    "first_name":"Sandra",
+    "last_name":"Murera Agahozo",
+    "email": "asandra@gmail.com",
+    "phone":"0791711521",
+    "family_member":0,
+    "age":17,
+    "gender":"female",
+    "marital_status":"single",
+    "children_number":0,
+    "child_age":0,
+    "child_names":"null",
+    "password": "987654321",
+    "password2": "987654321"
+}
+
+### get member by id
+GET HTTP://localhost:2000/members/4
+
+### update member by id
+PATCH HTTP://localhost:2000/members/4
+Content-Type: application/json
+
+{
+    "first_name":"Julien",
+    "last_name":"Murera Pasika",
+    "email": "pjulien@gmail.com",
+    "phone":"+250786024971",
+    "family_member":0,
+    "age":19,
+    "gender":"male",
+    "marital_status":"single",
+    "children_number":0,
+    "child_age":0,
+    "child_names":"null",
+    "password": "123456789",
+    "password2": "123456789"
+}
+
+### delete member
+DELETE HTTP://localhost:2000/members/8
+
+###
+GET HTTP://localhost:2000/accounts
+
+###
+POST HTTP://localhost:2000/accounts/create
+Content-Type: application/json
+
+{
+    "acc_no": "CS0001",
+    "acc_type": "Saving",
+    "amount": 5000
+}
+
+###
+PATCH HTTP://localhost:2000/accounts/2
+Content-Type: application/json
+
+{
+    "acc_no": "CS0002",
+    "acc_type": "normal",
+    "amount": 10000
+}
+
+###
+DELETE HTTP://localhost:2000/accounts/4
